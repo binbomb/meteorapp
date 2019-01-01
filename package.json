@@ -1,0 +1,32 @@
+{
+  "name": "intermedia",
+  "private": true,
+  "scripts": {
+    "start": "set MONGO_URL=mongodb://binbomb:asdfghjkl123456@ds245532.mlab.com:45532/nodeapi meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer",
+    "scripts": "set MONGO_URL=mongodb://binbomb:asdfghjkl123456@ds245532.mlab.com:45532/nodeapi"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0",
+    "bcrypt": "^3.0.2",
+    "highlight.js": "^9.13.1",
+    "jquery": "^3.3.1",
+    "meteor-node-stubs": "^0.4.1",
+    "moment": "^2.22.2",
+    "simpl-schema": "^1.5.3"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  },
+  "devDependencies": {
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.26.0"
+  }
+}

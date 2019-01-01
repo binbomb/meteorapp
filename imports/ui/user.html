@@ -1,0 +1,15 @@
+
+<template name="user">
+		
+	
+	{{#if users}}
+		{{#each users}}	
+			{{> taguser }}			
+		{{/each}} 
+	
+		{{else}}
+			{{#if true}}
+				{{> taguser }}
+			{{/if}}
+	{{/if}}
+</template>

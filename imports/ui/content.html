@@ -1,0 +1,51 @@
+<template name="content">
+
+	  <div class="">
+		<header class="header_">
+		
+
+			
+			<div class="parent" tabindex="0">
+				<h1>Todo List ({{incompleteCount}})</h1>
+				<div class="child">
+					<label class="hide-completed">
+					<input type="checkbox" />
+					Hide Completed Tasks
+					
+					</label>
+
+				   {{> loginButtons}}
+				   {{#if currentUser}}
+				   
+					   <form class="new-task">
+						<input type="text" name="text" placeholder="Type to add new tasks" />
+						<div class="row">				
+							{{> tag}}						
+						</div>
+						<input  name="tagname" placeholder="add more tag"/><br>
+						<input type="text" name="urlimg" placeholder="urlimg" />
+						<textarea name="content" rows="10" cols="100" ></textarea><br/>
+						<button class="button" type="submit">Add</button>
+					  </form>
+
+					{{/if}}
+				</div>
+			</div>​		  
+		</header>
+
+		<div class="col2">
+
+			<ul>
+		   {{#each users}}	
+		   
+
+					{{> user }}
+			{{/each}}	
+				
+			</ul>
+
+		</div>
+	  </div>
+
+	
+</template>

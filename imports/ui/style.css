@@ -1,0 +1,10 @@
+#event-calendar{
+	width:700px;
+}
+#calendar-modal{
+	width:700px;
+	 width: 40%;
+	position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+}

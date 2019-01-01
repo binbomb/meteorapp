@@ -1,0 +1,59 @@
+<template name="App">
+		<div class="ui inverted segment row1" id="mainmenutop">
+		<a href="/"><button class="ui inverted  basic  button " name="Home">  Home</button></a>
+		<a href="/one"><button class="ui inverted  basic   button" name="one">Page One</button></a>
+		<a href="/two"><button class="ui inverted  basic  button" name="schedule">schedule</button></a>
+		</div>  
+		<div class="mainlayout">
+			<div class="co">
+				<div class="parent">
+					<span class="circular ui  button btn">Toogle</span>
+					<div class="child">
+						
+						<label class="switch">
+						  <input type="checkbox">
+						  <span class="slider"></span>
+						</label>
+
+						<div class="toogle-menu">
+						 {{#if currentUser}}
+						<div class="row">
+							  {{#each tagsss}}
+								{{> tagss}}
+							  {{/each}}
+						</div>
+						{{/if}}
+						  {{#each tasks}}
+							{{> task}}
+						  {{/each}}
+						</div>
+						<form class="new-search">
+							<input  name="keysearch" placeholder="key for search"/><br>
+							<button class="button" >Search</button>
+						</form>
+						 {{#if currentUser}}
+						<form class="add-tag">
+							<div class="row">			
+								{{> tag}}					
+							</div>
+							<input  name="tagname" placeholder="add more tag"/><br>
+							<button class="button" >Add</button>
+						</form>
+						{{/if}}
+					</div>
+				</div>​
+
+			</div>
+			<div class="container">	
+			{{#if Template.subscriptionsReady}}
+				{{#if Template.subscriptionsReady}}
+					
+					{{> Template.dynamic template=main data=data }}
+				{{/if}}
+				{{else}}
+					{{> App_loading}}
+			{{/if}}
+			</div>
+		</div>	
+
+</template>

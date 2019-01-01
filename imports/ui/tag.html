@@ -1,0 +1,5 @@
+<template name="tag">
+          {{#each t in tags}}
+			<a href="/tags/{{t.tagname}}/{{t._id}}"><span class="tag1">{{t.tagname}}</span></a>
+          {{/each}}	
+</template>

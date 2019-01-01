@@ -1,0 +1,2 @@
+
+import '../lib/router.js';

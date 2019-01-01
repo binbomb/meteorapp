@@ -1,0 +1,47 @@
+<template name="taguser">
+			<li class="{{#if checked}}checked {{else}}check{{/if}}">
+				   {{#if currentUser}}
+						<div class="delete">&times;</div>
+						<input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+
+					{{/if}}
+						
+				<div class="leftbox">	
+
+					<span class="text"><h3>{{text}}&#10; <a href="/{{_id}}/{{trim_str text}}">detail</a></h3></span>
+					<div class="show">  </div>
+					<span class="text">{{formatTime createdAt}}</span>
+					<span class="text"><h5>{{username}}</h5>&nbsp;&nbsp;{{tagname}}</span>
+					<div class="col1">
+						
+						<div class="p-modal">
+						
+							<div class="p-container">
+								<a class="close">&times;</a>
+								<p>{{{content}}}</p>
+								<pre><code class="hljs">
+
+								</code></pre>
+							   {{#if currentUser}}		
+									<form class="edit" >
+										<textarea style="width:750px;" rows="10" name="content1">{{{content}}}</textarea>
+										<button type="submit" >add comment</button>
+									</form>
+									
+								{{/if}}	
+							</div>
+						</div>
+					
+						
+					 
+
+					</div>	
+			
+						
+				</div>	
+				<div class="imgbox">
+					<span><img src="{{boximg}}" width="400" height="240"></span>
+				</div>
+					
+			</li>
+</template>
